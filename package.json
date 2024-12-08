@@ -1,0 +1,65 @@
+{
+  "name": "tstics",
+  "version": "0.1.0",
+  "description": "TypeScript tooling to make better decisions about your library",
+  "author": "Igal Klebanov <igalklebanov@gmail.com> (https://github.com/igalklebanov)",
+  "license": "MIT",
+  "repository": "git://github.com/igaklebanov/typescriptics.git",
+  "type": "module",
+  "bin": {
+    "tstics": "./dist/bin.js"
+  },
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    "./package.json": "./package.json",
+    ".": {
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      },
+      "require": {
+        "types": "./dist/index.d.cts",
+        "default": "./dist/index.cjs"
+      }
+    }
+  },
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "biome": "biome",
+    "build": "tsup",
+    "check:dts": "attw --pack .",
+    "prepublishOnly": "biome check && pnpm build && pnpm check:dts",
+    "start": "pnpm build --watch",
+    "test": "vitest"
+  },
+  "keywords": [
+    "typescript",
+    "tooling",
+    "library",
+    "decision",
+    "analysis",
+    "statistics"
+  ],
+  "dependencies": {
+    "citty": "^0.1.6",
+    "consola": "^3.2.3",
+    "console-table-printer": "^2.12.1",
+    "semver": "^7.6.3",
+    "std-env": "^3.8.0"
+  },
+  "devDependencies": {
+    "@arethetypeswrong/cli": "^0.17.1",
+    "@biomejs/biome": "^1.9.4",
+    "@tsconfig/node22": "^22.0.0",
+    "@types/node": "^22.10.1",
+    "@types/semver": "^7.5.8",
+    "tsup": "^8.3.5",
+    "typescript": "^5.7.2",
+    "vitest": "^2.1.8"
+  },
+  "packageManager": "pnpm@9.15.0+sha512.76e2379760a4328ec4415815bcd6628dee727af3779aaa4c914e3944156c4299921a89f976381ee107d41f12cfa4b66681ca9c718f0668fa0831ed4c6d8ba56c"
+}

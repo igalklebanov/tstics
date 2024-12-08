@@ -1,0 +1,10 @@
+{
+  "extends": "./node_modules/@tsconfig/node22/tsconfig.json",
+  "compilerOptions": {
+    "resolveJsonModule": true,
+    "module": "NodeNext",
+    "moduleResolution": "nodenext"
+  },
+  "exclude": ["node_modules", "dist"],
+  "include": ["src", "tests"]
+}
