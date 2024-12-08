@@ -1,6 +1,6 @@
 import { type ArgsDef, type CommandDef, showUsage } from 'citty'
-import pkgJson from '../../package.json' with { type: 'json' }
 import { LogLevels, consola } from 'consola'
+import pkgJson from '../../package.json' with { type: 'json' }
 import { isInSubcommand } from '../utils/is-in-subcommand.mjs'
 import { DownloadsCommand } from './downloads.mjs'
 
