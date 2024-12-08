@@ -1,6 +1,6 @@
 {
   "name": "tstics",
-  "version": "0.1.1",
+  "version": "0.1.2",
   "description": "TypeScript tooling to make better decisions about your library",
   "author": "Igal Klebanov <igalklebanov@gmail.com> (https://github.com/igalklebanov)",
   "license": "MIT",
