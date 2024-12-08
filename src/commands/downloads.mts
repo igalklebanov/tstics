@@ -9,7 +9,7 @@ const command = {
 		description: 'TypeScript download stats',
 	},
 	subCommands: {},
-	async run(context) {
+	async run(context: CommandContext) {
 		consola.debug(context, [])
 
 		const downloads = await getDownloads('typescript')
