@@ -4,7 +4,7 @@
   "description": "TypeScript tooling to make better decisions about your library",
   "author": "Igal Klebanov <igalklebanov@gmail.com> (https://github.com/igalklebanov)",
   "license": "MIT",
-  "repository": "git://github.com/igaklebanov/tstics.git",
+  "repository": "git://github.com/igalklebanov/tstics.git",
   "type": "module",
   "bin": {
     "tstics": "./dist/bin.js"
